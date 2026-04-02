@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://duc41iux0ywqx"]
+
+[ext_resource type="Texture2D" uid="uid://xqa8ufi1pfh0" path="res://Mothman.png" id="1_5q14k"]
+[ext_resource type="Script" uid="uid://bo5rev1qnjq6u" path="res://mothman.gd" id="1_cweny"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cweny"]
+size = Vector2(16, 16)
+
+[node name="Mothman" type="Area2D" unique_id=72369355]
+collision_mask = 3
+script = ExtResource("1_cweny")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=419536983]
+texture = ExtResource("1_5q14k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1778234301]
+shape = SubResource("RectangleShape2D_cweny")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://b3c5ic0f5caos"]
+
+[ext_resource type="Script" uid="uid://c47drdts8qmbc" path="res://spawn_block.gd" id="1_t2sc7"]
+[ext_resource type="Texture2D" uid="uid://co0au6caclsh2" path="res://SpawnBlock.png" id="1_vp8rt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t2sc7"]
+size = Vector2(8, 3)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v0a4m"]
+size = Vector2(8, 4)
+
+[node name="SpawnBlock" type="Area2D" unique_id=724483106]
+collision_mask = 2
+script = ExtResource("1_t2sc7")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=73914347]
+texture = ExtResource("1_vp8rt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2062461988]
+position = Vector2(0, 2.5)
+shape = SubResource("RectangleShape2D_t2sc7")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1588685035]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=256415242]
+position = Vector2(0, -2)
+shape = SubResource("RectangleShape2D_v0a4m")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
