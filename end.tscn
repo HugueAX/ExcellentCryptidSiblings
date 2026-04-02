@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://87cj1j6inbyo"]
+
+[ext_resource type="Texture2D" uid="uid://d2vf2uhvsho3x" path="res://background.png" id="1_n735c"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_t68xc"]
+font_size = 100
+outline_size = 16
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_n735c"]
+font_size = 48
+outline_size = 16
+outline_color = Color(0, 0, 0, 1)
+
+[node name="End" type="Control" unique_id=1558733989]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1593735175]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(1.1368324, 0.63290423)
+texture = ExtResource("1_n735c")
+
+[node name="Label" type="Label" parent="." unique_id=1598247516]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -386.0
+offset_top = -137.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "The End"
+label_settings = SubResource("LabelSettings_t68xc")
+
+[node name="Label2" type="Label" parent="." unique_id=1878073480]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = -64.5
+offset_right = 500.0
+offset_bottom = 72.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Fresno and Mothman are able to enjoy the 
+muffins together in peace."
+label_settings = SubResource("LabelSettings_n735c")
