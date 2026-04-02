@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://c6kptom1o74tn"]
+
+[ext_resource type="Texture2D" uid="uid://bhfai1rqjf8np" path="res://camera.png" id="1_37p78"]
+[ext_resource type="Script" uid="uid://c3suq1qgyb70p" path="res://hud.gd" id="1_64ctp"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_n2snw"]
+font_size = 48
+outline_size = 16
+outline_color = Color(0, 0, 0, 1)
+
+[node name="HUD" type="MarginContainer" unique_id=1524338135]
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 20
+script = ExtResource("1_64ctp")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1823146901]
+layout_mode = 2
+
+[node name="Score" type="Label" parent="HBoxContainer" unique_id=1040837561]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0"
+label_settings = SubResource("LabelSettings_n2snw")
+
+[node name="LifeCounter" type="HBoxContainer" parent="HBoxContainer" unique_id=1060274255]
+layout_mode = 2
+
+[node name="L1" type="TextureRect" parent="HBoxContainer/LifeCounter" unique_id=330791918]
+layout_mode = 2
+texture = ExtResource("1_37p78")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="L2" type="TextureRect" parent="HBoxContainer/LifeCounter" unique_id=46551385]
+layout_mode = 2
+texture = ExtResource("1_37p78")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="L3" type="TextureRect" parent="HBoxContainer/LifeCounter" unique_id=1238791181]
+layout_mode = 2
+texture = ExtResource("1_37p78")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="L4" type="TextureRect" parent="HBoxContainer/LifeCounter" unique_id=1673569485]
+layout_mode = 2
+texture = ExtResource("1_37p78")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="L5" type="TextureRect" parent="HBoxContainer/LifeCounter" unique_id=1275172582]
+layout_mode = 2
+texture = ExtResource("1_37p78")
+expand_mode = 2
+stretch_mode = 5

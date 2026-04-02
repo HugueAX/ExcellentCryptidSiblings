@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://5kq7xsrf3kki"]
+
+[ext_resource type="Script" uid="uid://du2nm1slcqkyi" path="res://intro.gd" id="1_sb8jg"]
+[ext_resource type="Texture2D" uid="uid://d2vf2uhvsho3x" path="res://background.png" id="2_sb8jg"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7eg0p"]
+font_size = 72
+outline_size = 16
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_gjrx4"]
+font_size = 32
+outline_size = 16
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_sb8jg"]
+font_size = 48
+outline_size = 16
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Control" type="Control" unique_id=1574678196]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sb8jg")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=816773439]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -3.0
+offset_right = -127.0
+offset_bottom = 380.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.1280388, 0.63037515)
+texture = ExtResource("2_sb8jg")
+stretch_mode = 5
+
+[node name="Title" type="Label" parent="." unique_id=2102690646]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -416.5
+offset_top = 45.0
+offset_right = 416.5
+offset_bottom = 144.0
+grow_horizontal = 2
+text = "Exellent Cryptid Siblings"
+label_settings = SubResource("LabelSettings_7eg0p")
+
+[node name="Message" type="Label" parent="." unique_id=730209715]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Mothman has lost all of his muffins!
+The Fresno Nighcrawler has decided to help him
+ look through the bushes to find as many as they can while
+avoiding the security cameras."
+label_settings = SubResource("LabelSettings_gjrx4")
+
+[node name="Play" type="Label" parent="." unique_id=1832671658]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = 550.0
+offset_right = 20.0
+offset_bottom = 573.0
+grow_horizontal = 2
+text = "Press Space to Play"
+label_settings = SubResource("LabelSettings_sb8jg")
+horizontal_alignment = 1
