@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://c20elc7g7chkf"]
+
+[ext_resource type="Script" uid="uid://fui5cafhflv" path="res://fresno_night_crawler.gd" id="1_2t1eb"]
+[ext_resource type="Texture2D" uid="uid://dknmta78a1t73" path="res://FresnoNightCrawler.png" id="1_m87q4"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2t1eb"]
+radius = 4.285716
+height = 17.142866
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_odl16"]
+size = Vector2(14.285715, 14.285715)
+
+[node name="FresnoNightCrawler" type="CharacterBody2D" unique_id=1026138690 groups=["Player"]]
+scale = Vector2(0.7, 0.7)
+collision_layer = 2
+collision_mask = 13
+script = ExtResource("1_2t1eb")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1750443508]
+texture = ExtResource("1_m87q4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=925059844]
+position = Vector2(-1.7029896e-07, -1.4285719)
+scale = Vector2(0.99999964, 0.99999964)
+shape = SubResource("CapsuleShape2D_2t1eb")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2000693121]
+zoom = Vector2(5, 5)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1755098530 groups=["Player"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1400732681]
+position = Vector2(5.684342e-14, 5.684342e-14)
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_odl16")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
